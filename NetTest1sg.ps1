@@ -1,3 +1,10 @@
+# NetTest1sg
+# Verzia: 1.0
+# Autor: Boris Kovář (založené na Copilot základe), 2025
+# Popis: Skript vyhľadá sieťové rozhrania a následne vykoná sadu testov pre určenie, či je v poriadku konektivita v LAN aj do internetu.
+#        Nakoniec výsledok uloží do log súboru v zložke NetworkLogs na disku C: spolu s časovým razítkom. Skript vznikol pre potrebu
+#        spätného preukazovania, že sieť na stanici fungovala ku konkrétnemu času (u nás napr. pred el. maturitami)
+
 # Základné nastavenia
 $logDir = "C:\NetworkLogs"
 if (-not (Test-Path $logDir)) { New-Item -Path $logDir -ItemType Directory | Out-Null }
