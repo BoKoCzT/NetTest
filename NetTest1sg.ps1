@@ -52,7 +52,7 @@ $publicIp = "8.8.8.8"
 Append-CommandOutput { ping -n 4 $publicIp }
 "" | Out-File $log -Append -Encoding UTF8
 
-"Test-NetConnection TCP test (port 53) to $publicIp:" | Out-File $log -Append -Encoding UTF8
+"Test-NetConnection TCP test (port 53) to ${publicIp}:" | Out-File $log -Append -Encoding UTF8
 Append-CommandOutput { Test-NetConnection -ComputerName $publicIp -Port 53 -InformationLevel Detailed }
 "" | Out-File $log -Append -Encoding UTF8
 
